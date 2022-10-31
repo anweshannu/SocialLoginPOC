@@ -35,6 +35,7 @@ class HomeViewController: UIViewController {
     @IBAction func onSignOutButtonClick(_ sender: Any) {
         
         GIDSignIn.sharedInstance.signOut()
+        UserDefaults.standard.set(false, forKey: "isUserLoggedIn")
         goToLoginScreen()
     }
     
