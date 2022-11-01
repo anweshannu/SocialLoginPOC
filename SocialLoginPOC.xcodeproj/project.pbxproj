@@ -14,7 +14,6 @@
 		7088F19B29103BF0006DF25E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7088F19A29103BF0006DF25E /* HomeViewController.swift */; };
 		70FB81E829100F3000803830 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FB81E729100F3000803830 /* AppDelegate.swift */; };
 		70FB81EA29100F3000803830 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FB81E929100F3000803830 /* SceneDelegate.swift */; };
-		70FB81EC29100F3000803830 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FB81EB29100F3000803830 /* ViewController.swift */; };
 		70FB81EF29100F3000803830 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70FB81ED29100F3000803830 /* Main.storyboard */; };
 		70FB81F129100F3200803830 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70FB81F029100F3200803830 /* Assets.xcassets */; };
 		70FB81F429100F3200803830 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70FB81F229100F3200803830 /* LaunchScreen.storyboard */; };
@@ -25,11 +24,11 @@
 
 /* Begin PBXFileReference section */
 		70231DA02910256A004A7756 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		70571EFE291168DA00FEFB58 /* SocialLoginPOC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialLoginPOC.entitlements; sourceTree = "<group>"; };
 		7088F19A29103BF0006DF25E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		70FB81E429100F3000803830 /* SocialLoginPOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialLoginPOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70FB81E729100F3000803830 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70FB81E929100F3000803830 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		70FB81EB29100F3000803830 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		70FB81EE29100F3000803830 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		70FB81F029100F3200803830 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70FB81F329100F3200803830 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,13 +79,13 @@
 		70FB81E629100F3000803830 /* SocialLoginPOC */ = {
 			isa = PBXGroup;
 			children = (
+				70571EFE291168DA00FEFB58 /* SocialLoginPOC.entitlements */,
+				70FB81F029100F3200803830 /* Assets.xcassets */,
 				70FB81FF2910118A00803830 /* Modules */,
 				70FB81FB2910108700803830 /* Utilities */,
 				70FB81E729100F3000803830 /* AppDelegate.swift */,
 				70FB81E929100F3000803830 /* SceneDelegate.swift */,
-				70FB81EB29100F3000803830 /* ViewController.swift */,
 				70FB81ED29100F3000803830 /* Main.storyboard */,
-				70FB81F029100F3200803830 /* Assets.xcassets */,
 				70FB81F229100F3200803830 /* LaunchScreen.storyboard */,
 				70FB81F529100F3200803830 /* Info.plist */,
 			);
@@ -208,7 +207,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70FB81EC29100F3000803830 /* ViewController.swift in Sources */,
 				70FB81E829100F3000803830 /* AppDelegate.swift in Sources */,
 				70FB81FE2910109F00803830 /* CardView.swift in Sources */,
 				7088F19B29103BF0006DF25E /* HomeViewController.swift in Sources */,
@@ -360,22 +358,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SocialLoginPOC/SocialLoginPOC.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AAXXXVN972;
+				DEVELOPMENT_TEAM = PBA9B3F737;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SocialLoginPOC/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sociallogin.poc.SocialLoginPOC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sociallogin.poc.SocialLoginPOC1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -388,22 +387,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SocialLoginPOC/SocialLoginPOC.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AAXXXVN972;
+				DEVELOPMENT_TEAM = PBA9B3F737;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SocialLoginPOC/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sociallogin.poc.SocialLoginPOC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sociallogin.poc.SocialLoginPOC1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

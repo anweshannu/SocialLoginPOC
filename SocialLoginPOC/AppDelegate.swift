@@ -7,6 +7,7 @@
 
 import UIKit
 import GoogleSignIn
+import FacebookCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,13 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        configureGoogleSignIn()
+        ApplicationDelegate.shared.application(
+            application,
+            didFinishLaunchingWithOptions: launchOptions
+        )
         return true
     }
     
-    private func configureGoogleSignIn(){
-        let signInConfig = GIDConfiguration(clientID: "927907213040-3s6vun3o18sf716muk43jilc07ockhlp.apps.googleusercontent.com")
-    }
+   
 
     // MARK: UISceneSession Lifecycle
 
@@ -36,12 +38,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-    
-    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask
-    {
-        return .portraitUpsideDown
-    }
-
 
 }
 
@@ -60,11 +56,20 @@ extension AppDelegate{
       }
 
       // Handle other custom URL types.
+        // facebook
+        ApplicationDelegate.shared.application(
+            app,
+            open: url,
+            sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+            annotation: options[UIApplication.OpenURLOptionsKey.annotation])
 
       // If not handled by this app, return false.
       return false
     }
     
+
+
    
+
     
 }
